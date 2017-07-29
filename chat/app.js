@@ -11,7 +11,7 @@ app.get('/', function(req, res){
 //SocketIO vem aqui
 io.on("connection", function (client) {
   client.on("join", function(name){
-    console.log("Joined: " + name);
+    console.log("Entrou: " + name);
     clients[client.id] = name;
     client.emit("update", "Vocês está conectado no chat.");
     client.broadcast.emit("update", name + " entrou no chat.")

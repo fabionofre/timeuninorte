@@ -1,3 +1,5 @@
+.gitignore
+chat/node_modules
 backend/env/
 backend/migrations/
 backend/sftp-config.json/

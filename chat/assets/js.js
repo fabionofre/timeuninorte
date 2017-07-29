@@ -7,10 +7,12 @@ $(document).ready(function(){
         $("#nick").fadeOut();
         $("#chat").fadeIn();
         var name = $("#nickname").val();
+        //var idade = $("#idade").val();
         var time = new Date();
         $("#name").html(name);
-        $("#time").html('Primeiro login: ' + time.getHours() + ':' + time.getMinutes());
-
+        $("#idade").html(idade);
+        //$("#time").html('Primeiro login: ' + time.getHours() + ':' + time.getMinutes());
+        console.log("idade:" + idade + " " + name + "  data: " + time);
         ready = true;
         socket.emit("join", name);
     });
