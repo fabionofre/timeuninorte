@@ -1,5 +1,21 @@
+<<<<<<< HEAD
 .gitignore
 chat/node_modules
+=======
+<<<<<<< HEAD
+.gitignore
+chat/node_modules
+=======
+<<<<<<< HEAD
+
+/frontend/nbproject/private/
+/frontend/node_modules/
+package.json
+/nbproject/private/
+=======
+>>>>>>> 5c63ccde36f20642f2c89d46d2042219606976c6
+>>>>>>> ad0ad6154474c6c963cb6eee7888a4204c7359a4
 backend/env/
 backend/migrations/
 backend/sftp-config.json/
+>>>>>>> b4090a1e6e45b80037e98b4b443b3cee91ce3529

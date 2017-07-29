@@ -1,6 +1,19 @@
 function RotasConfig($routeProvider) {
 	$routeProvider
 	.when('/', {
+		templateUrl: '/app/home.html',
+		resolve:{
+			lazy:['$ocLazyLoad', ($ocLazyLoad)=>{
+				return $ocLazyLoad.load([{
+					insertBefore:'#loadBefore',
+					files:[
+						'./css/bootstrap-theme.css',
+					]
+				}])
+			}]
+		}
+	})
+	.when('/login', {
 		templateUrl: '/app/login/login.html',
 		controller: 'SemPressaoLogin',
 		resolve:{

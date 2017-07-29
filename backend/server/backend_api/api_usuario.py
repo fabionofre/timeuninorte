@@ -84,7 +84,7 @@ def InserirUsuario():
 			'nome_usuario':nome_usuario,
 			'email':email,
 			'password':password,
-			'data_nascimento':data_nascimento,
+			'data_nascimento':ConverterData(data_nascimento),
 			'sexo':sexo,
 			'telefone':telefone,
 			'active':active,
