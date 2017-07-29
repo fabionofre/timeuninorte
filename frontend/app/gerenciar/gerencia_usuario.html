@@ -1,0 +1,46 @@
+<section id="container">
+	<div ng-include="'app/cabecalho.html'"></div>
+	<div ng-include="'app/menu.html'"></div>
+	<section id="main-content">
+		<section class="wrapper col-lg-10">
+			<div class="col-lg-12">
+	            <section class="panel">
+	                <header class="panel-heading text-center">
+	                    Usuários
+	                </header>
+	                <div class="col-lg-12">
+	                    <input class="form-control" type="text" name="pesquisa_usuario" ng-model="pesquisa_usuario" placeholder="Digite aqui para pesquisar">
+	                </div>
+	                <div class="panel-body">
+	                    <section id="unseen">
+	                        <table class="table table-bordered table-striped table-condensed">
+	                            <thead>
+	                                <tr>
+	                                    <th class="text-center">NOME</th>
+	                                    <th class="text-center">E-MAIL</th>
+	                                    <th class="text-center">AÇÕES</th>
+	                                </tr>
+	                            </thead>
+	                            <tbody>
+	                                <tr ng-repeat="und in listarUsers | filter:pesquisa_usuario">
+	                                    <td>{{und.nome_usuario}}</td>
+	                                    <td>{{und.email}}</td>
+	                                    <td class="text-center">
+	                                        <a href="" ng-click="visualizar_usuario(und)"><i class="icon-eye-open" title="Visualizar"></i></a> |
+	                                        <a href="" ng-click="novo_usuario(und)"><i class="icon-pencil" title="Editar"></i></a> |
+	                                        <a href="" ng-click="excluir_usuario(und.id)"><i class="icon-remove-sign" title="Excluir"></i></a>
+	                                    </td>
+	                                </tr>
+	                            </tbody>
+	                        </table>
+	                    </section>
+	                </div>
+	            </section>
+	        </div>
+        </section>
+	</section>
+	<div ng-include="'app/modal_status/modal_visualizar_usuario.html'"></div>
+	<div ng-include="'app/novousuario/modal_novo_usuario.html'"></div>
+	<div ng-include="'app/modal_status/modal_decisao_usuario.html'"></div>
+	<div ng-include="'app/rodape.html'"></div>
+</section>

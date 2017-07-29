@@ -1,0 +1,72 @@
+.types_sexo{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+
+.types_sexo:after{
+	content: "";
+	clear: both;
+}
+
+.type_sexo{
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	float: left;
+	height: 65px;
+	position: relative;
+	width: 120px;
+}
+
+.type_sexo + .type_sexo{
+	margin-left: 25px;
+}
+
+.type_sexo label{
+	background: #fff no-repeat center center;
+	bottom: 1px;
+	cursor: pointer;
+	display: block;
+	font-size: 0;
+	left: 1px;
+	position: absolute;
+	right: 1px;
+	text-indent: 100%;
+	top: 1px;
+	white-space: nowrap;
+}
+
+.masculino label{
+	background-image: url(img/masc.png);
+	height: 60px;
+}
+.feminino label{
+	background-image: url(img/femi.png);
+	height: 60px;
+}
+
+.types_sexo input:focus + label{
+	outline: 2px dotted #21b4d0;
+}
+.types_sexo input:checked + label{
+	outline: 4px solid #21b4d0;
+}
+
+.types_sexo input:checked + label:after{
+	background: url(img/check.png);
+	bottom: -10px;
+	content: "";
+	display: inline-block;
+	height: 20px;
+	position: absolute;
+	right: -10px;
+	width: 20px;
+}
+
+.position{
+	margin-left: 0%;
+}
+
+.color_black{
+	color: black;
+}

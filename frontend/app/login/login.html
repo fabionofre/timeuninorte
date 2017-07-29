@@ -1,0 +1,30 @@
+	<div class="container">
+		<form class="form-signin">
+			<h2 class="form-signin-heading">Administração</h2>
+			<div class="login-wrap">
+				<div ng-show="loading">
+					<div ng-show="loading">
+						<div class="cssload-loader">
+							<div class="cssload-inner cssload-one"></div>
+							<div class="cssload-inner cssload-two"></div>
+							<div class="cssload-inner cssload-three"></div>
+						</div>				
+					</div>
+					<div class="text-center">
+						<h4>Aguarde ... </h4>
+					</div>
+				</div>
+				<div ng-hide="loading">
+					<input type="text" class="form-control" placeholder="Email" name="email" ng-model="dadosLogin.email" autofocus required>
+					<input type="password" class="form-control" placeholder="Senha" name="password" ng-model="dadosLogin.password" required>
+					<button class="btn btn-lg btn-login  btn-block" ng-click="login(dadosLogin)">Entrar</button>
+                                        <button class="btn btn-lg btn-login btn-block" ng-click="window.location='#!/novo_usuario'" style="background-color: #FF6C60; box-shadow:0 4px #9E433C">Cadastrar-se</button>
+					<div class="text-center">
+						<p style="color:red;">{{menssagem}}</p>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>	
+	<!-- js placed at the end of the document so the pages load faster -->
+	<script src="js/bootstrap.min.js"></script>

@@ -1,0 +1,22 @@
+{
+  "name": "SemPressao",
+  "version": "1.0.0",
+  "homepage": "https://github.com/lclpedro/Desenvolvimento_TCC",
+  "authors": [
+    "Pedro Lucas <lclpedro@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "leaflet.pm": "^0.16.0"
+  }
+}

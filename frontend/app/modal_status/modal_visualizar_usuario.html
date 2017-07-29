@@ -1,0 +1,47 @@
+<div class="modal fade" id="modalVisualizarUsuario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title text-center">Dados do Usuário</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-lg-12">
+                    <div class="col-lg-12 text-center">
+                        <p class="p_title">Numero de Identificação:</p>
+                        <p>{{user.id}}</p>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-6">
+                            <p class="p_title">Nome:</p>
+                            <p>{{user.nome_usuario}}</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="p_title">Email:</p>
+                            <p>{{user.email}}</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-6">
+                            <p class="p_title">Telefone:</p>
+                            <p>{{user.telefone}}</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p class="p_title">Data Nascimento:</p>
+                            <p>{{user.data_nascimento}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer footer_modal">
+                    <div class="col-lg-12">
+                        <div class="col-lg-12">
+                            <div class="col-lg-12">
+                                <button class="btn btn-danger btn-block" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
