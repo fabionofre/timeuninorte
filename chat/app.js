@@ -13,8 +13,8 @@ io.on("connection", function (client) {
   client.on("join", function(name){
     console.log("Joined: " + name);
     clients[client.id] = name;
-    client.emit("update", "You have connected to the server.");
-    client.broadcast.emit("update", name + " has joined the server.")
+    client.emit("update", "Vocês está conectado no chat.");
+    client.broadcast.emit("update", name + " entrou no chat.")
   });
 
   client.on("send", function(msg){
@@ -24,16 +24,16 @@ io.on("connection", function (client) {
 
   client.on("disconnect", function(){
     console.log("Disconnect");
-    io.emit("update", clients[client.id] + " has left the server.");
+    io.emit("update", clients[client.id] + " saiu do chat.");
     delete clients[client.id];
   });
 });
 
 
 io.on("connection", function (client) {
-    console.log('user connected');
+    console.log('Usuário Conectado');
 });
 
 http.listen(3000, function(){
-	console.log('listening on port 3000');
+	console.log('Escutando na porta 3000');
 });

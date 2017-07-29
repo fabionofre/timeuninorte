@@ -9,7 +9,7 @@ $(document).ready(function(){
         var name = $("#nickname").val();
         var time = new Date();
         $("#name").html(name);
-        $("#time").html('First login: ' + time.getHours() + ':' + time.getMinutes());
+        $("#time").html('Primeiro login: ' + time.getHours() + ':' + time.getMinutes());
 
         ready = true;
         socket.emit("join", name);
