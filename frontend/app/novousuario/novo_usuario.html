@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="app/novousuario/style.css">
 <section id="container">
+<<<<<<< HEAD
   <section class="wrapper col-lg-10">
     <section class="panel">
         <header class="panel-heading text-center">
@@ -59,6 +60,69 @@
                 </div>
             </div>
         </form>
+=======
+    <!--<section id="main-content">-->
+        <section class="wrapper col-lg-12">
+            <section class="panel">
+                <header class="panel-heading text-center">
+                    <h3>Bem vindo, vamos lhe ajudar neste desafio.</h3>
+                    
+                </header>
+                <form class="form-horizontal" role="form">
+                    <div class="form-group col-lg-12">
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="nome" ng-model="newuser.nome" placeholder="Nome" autofocus>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="email" class="form-control" id="email" ng-model="newuser.email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <div class="col-lg-6">
+                            <input type="password" class="form-control" id="senha" ng-model="newuser.password" placeholder="Senha">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="password" class="form-control" id="repete_senha" ng-model="newuser.repeat_password" placeholder="Repetir Senha">
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12">
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="phone" ng-model="newuser.telefone" placeholder="Telefone">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" class="form-control" id="data_nascimento" ng-model="newuser.data_nascimento" placeholder="Data Nascimento">
+                        </div>
+                    </div>
+                    <div class="col-lg-12" style="margin-left: 37.5%">
+                        <div class="col-lg-12 form-group">
+                            <ul class="types_sexo position">
+                                <li class="type_sexo masculino">
+                                    <input type="radio" name="types_sexo" id="masculino" value="M" ng-model="newuser.sexo">
+                                    <label for="masculino">Masculino</label>
+                                </li>
+                                <li class="type_sexo feminino">
+                                    <input type="radio" name="types_sexo" id="feminino" value="F" ng-model="newuser.sexo">
+                                    <label for="feminino">Feminino</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <div ng-show="loading">
+                            <div class="cssload-loader">
+                                <div class="cssload-inner cssload-one"></div>
+                                <div class="cssload-inner cssload-two"></div>
+                                <div class="cssload-inner cssload-three"></div>
+                            </div>  
+                        </div>
+                        <div ng-hide="loading">
+                            <button class="btn btn-success" ng-click="cadastrar_usuario(newuser)">Salvar</button><br><br>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        <!--</section>-->
+>>>>>>> 5c63ccde36f20642f2c89d46d2042219606976c6
     </section>
 </section>
 <div ng-include="'app/rodape.html'"></div>

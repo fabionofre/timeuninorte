@@ -15,8 +15,8 @@
 					</div>
 				</div>
 				<div ng-hide="loading">
-					<input type="text" class="form-control" placeholder="Email" name="email" ng-model="dadosLogin.email" autofocus required>
-					<input type="password" class="form-control" placeholder="Senha" name="password" ng-model="dadosLogin.password" required>
+					<input type="text" class="form-control" placeholder="Email" name="email" ng-model="dadosLogin.email" autofocus required="">
+					<input type="password" class="form-control" placeholder="Senha" name="password" ng-model="dadosLogin.password" required="">
 					<button class="btn btn-lg btn-login  btn-block" ng-click="login(dadosLogin)">Entrar</button>
 					<div class="text-center">
 						<p style="color:red;">{{menssagem}}</p>
