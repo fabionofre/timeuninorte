@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8">
- <title>Chat</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>Chat</title>
+	<link rel="stylesheet" href="app/chat/assets/css.css">
 </head>
 <body>
 	<div class="nickname_container" id="nick">
 		<span>Digite seu nome</span>
-		<form id="submit"><input type="text" id="nickname" /></form>
+		<form id="submit">
+			<input type="text" id="nickname"/>
+		</form>
 	</div>
-<!-- 			<span>Digite sua idade</span>
-			<div class="col-sm-3">
-				<input type="text" id="idade" />
-			</div> -->
-		
+
 	<div id="chat" hidden>
 
-	<div class="menu">
-		<div class="name" id="name"></div>
-		<div class="last" id="time"></div>
-	</div>
+		<div class="menu">
+			<div class="name" id="name"></div>
+			<div class="last" id="time"></div>
+		</div>
 
 
-	<ol class="chat">
- 
- 	</ol>
-	<input class="textarea" type="text" placeholder="Digite aqui!" id="textarea" />
+		<ol class="chat"></ol>
+		<input class="textarea" type="text" placeholder="Digite aqui!" id="textarea" />
 	</div>
+	<script src="app/chat/node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="app/chat/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+	<script src="app/chat/assets/js.js"></script>
 </body>
 </html>

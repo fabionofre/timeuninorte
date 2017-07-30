@@ -1,13 +1,14 @@
 function RotasConfig($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl: '/app/home.html',
+		templateUrl: '/app/cliente/home.html',
 		resolve:{
 			lazy:['$ocLazyLoad', ($ocLazyLoad)=>{
 				return $ocLazyLoad.load([{
-					insertBefore:'#loadBefore',
+					insertBefore:'#loadhome',
 					files:[
-						'./css/bootstrap-theme.css',
+						'app/cliente/src/bootstrap.min.css',
+ 						'app/cliente/src/style.css',
 					]
 				}])
 			}]
@@ -77,22 +78,22 @@ function RotasConfig($routeProvider) {
 	})
 	.when('/novo_chat', {
 		templateUrl: 'app/chat/chat.html',
-		resolve:{
-			lazy:['$ocLazyLoad', ($ocLazyLoad)=>{
-				return $ocLazyLoad.load([{
-					insertBefore:'#loadBefore',
-					files:[
-						'app/chat/assets/css.css',	
-						'app/chat/assets/js.js',	
-						'app/chat/node_modules/jquery/dist/jquery.min.js',	
-						'app/chat/node_modules/socket.io-client/dist/socket.io.js',	
-					]
-				}])
-			}]
-		}
+		// resolve:{
+		// 	lazy:['$ocLazyLoad', ($ocLazyLoad)=>{
+		// 		return $ocLazyLoad.load([{
+		// 			insertBefore:'#loadBefore',
+		// 			files:[
+		// 				'app/chat/node_modules/jquery/dist/jquery.min.js',	
+		// 				'app/chat/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js',	
+		// 				'app/chat/assets/css.css',	
+		// 				'app/chat/assets/js.js',	
+		// 			]
+		// 		}])
+		// 	}]
+		// }
 	})
 };
 angular.module("SemPressao",['ngRoute','ngStorage', 'oc.lazyLoad']);
 angular
-.module('SemPressao')
-.config(RotasConfig)
+	.module('SemPressao')
+	.config(RotasConfig)
