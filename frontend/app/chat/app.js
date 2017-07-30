@@ -34,6 +34,6 @@ io.on("connection", function (client) {
     console.log('Usuário Conectado');
 });
 
-http.listen(3000, function(){
-	console.log('Escutando na porta 3000');
+http.listen(4000, function(){
+	console.log('Escutando na porta 4000');
 });
