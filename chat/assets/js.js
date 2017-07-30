@@ -10,9 +10,8 @@ $(document).ready(function(){
         //var idade = $("#idade").val();
         var time = new Date();
         $("#name").html(name);
-        $("#idade").html(idade);
         //$("#time").html('Primeiro login: ' + time.getHours() + ':' + time.getMinutes());
-        console.log("idade:" + idade + " " + name + "  data: " + time);
+        console.log("Nome: " + name + "  data: " + time);
         ready = true;
         socket.emit("join", name);
     });
