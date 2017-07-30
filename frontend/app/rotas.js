@@ -1,15 +1,13 @@
 function RotasConfig($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl: '/app/cliente/home.html',
+		templateUrl: '/app/home.html',
 		resolve:{
 			lazy:['$ocLazyLoad', ($ocLazyLoad)=>{
 				return $ocLazyLoad.load([{
-					insertBefore:'#loadhome',
-					name:'SemPressao',
+					insertBefore:'#loadBefore',
 					files:[
-						'./app/cliente/src/bootstrap.min.css',
-						'./app/cliente/src/style.css',
+						'./css/bootstrap-theme.css',
 					]
 				}])
 			}]
@@ -79,6 +77,19 @@ function RotasConfig($routeProvider) {
 	})
 	.when('/novo_chat', {
 		templateUrl: 'app/chat/chat.html',
+		resolve:{
+			lazy:['$ocLazyLoad', ($ocLazyLoad)=>{
+				return $ocLazyLoad.load([{
+					insertBefore:'#loadBefore',
+					files:[
+						'app/chat/assets/css.css',	
+						'app/chat/assets/js.js',	
+						'app/chat/node_modules/jquery/dist/jquery.min.js',	
+						'app/chat/node_modules/socket.io-client/dist/socket.io.js',	
+					]
+				}])
+			}]
+		}
 	})
 };
 angular.module("SemPressao",['ngRoute','ngStorage', 'oc.lazyLoad']);

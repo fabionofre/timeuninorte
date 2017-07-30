@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var socket = io.connect("http://172.16.60.223:4000");
+    var socket = io.connect("http://localhost:3000");
     var ready = false;
 
     $("#submit").submit(function(e) {
@@ -10,9 +10,8 @@ $(document).ready(function(){
         //var idade = $("#idade").val();
         var time = new Date();
         $("#name").html(name);
-        // $("#idade").html(idade);
         //$("#time").html('Primeiro login: ' + time.getHours() + ':' + time.getMinutes());
-        console.log("nome:"+name + "  data: " + time);
+        console.log("Nome: " + name + "  data: " + time);
         ready = true;
         socket.emit("join", name);
     });

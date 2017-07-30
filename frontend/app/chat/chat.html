@@ -1,20 +1,31 @@
-<link rel="stylesheet" href="app/chat/assets/css.css">
-<div class="nickname_container" id="nick">
-	<form id="submit">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Chat</title>
+</head>
+<body>
+	<div class="nickname_container" id="nick">
 		<span>Digite seu nome</span>
-		<div class="col-sm-12">
-			<input type="text" id="nickname" />
-		</div>
-	</form>
-</div>
-<div id="chat" hidden>
+		<form id="submit"><input type="text" id="nickname" /></form>
+	</div>
+<!-- 			<span>Digite sua idade</span>
+			<div class="col-sm-3">
+				<input type="text" id="idade" />
+			</div> -->
+		
+	<div id="chat" hidden>
+
 	<div class="menu">
 		<div class="name" id="name"></div>
 		<div class="last" id="time"></div>
 	</div>
-	<ol class="chat"></ol>
+
+
+	<ol class="chat">
+ 
+ 	</ol>
 	<input class="textarea" type="text" placeholder="Digite aqui!" id="textarea" />
-</div>
-<script src="app/chat/node_modules/jquery/dist/jquery.min.js"></script>
-<script src="app/chat/node_modules/socket.io-client/dist/socket.io.js"></script>
-<script src="app/chat/assets/js.js"></script>
+	</div>
+</body>
+</html>
