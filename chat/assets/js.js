@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var socket = io.connect("http://localhost:3000");
+    var socket = io.connect("http://172.16.60.223:4000");
     var ready = false;
 
     $("#submit").submit(function(e) {
